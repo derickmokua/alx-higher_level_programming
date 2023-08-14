@@ -1,17 +1,18 @@
-#!/usr/bin/python3
-
-"""
-Retrieves an element from a Python list, mimicking C-style list indexing.
-
-Parameters:
-    my_list (list): The list from which to retrieve the element.
-    idx (int): The index of the element to retrieve.
-
-Returns:
-    The element located at the specified index within the list.
-"""
+#!/usr/bin/python
 
 #Validate for negative and out-of-range indices.
+
+def divisible_by_2(my_list=[]):
+
+    """Find the multiples of 2 in a list
+
+        Args:
+            my_list: a list
+
+        Returns:
+            True or False
+        """
+
 
 if idx < 0:
         return None
