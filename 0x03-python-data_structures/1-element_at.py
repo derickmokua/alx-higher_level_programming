@@ -1,20 +1,22 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-#Validate for negative and out-of-range indices.
+# Python program that:
+# demonstrates how to retrieve an element from a list like in C
 
-def divisible_by_2(my_list=[]):
+def element_at(my_list, idx):
 
-    """Find the multiples of 2 in a list
+     """Retrieves an element from a list like in C
 
-        Args:
-            my_list: a list
+    Args:
+        my_list: a list
+        idx: the index of item to retrieve
 
-        Returns:
-            True or False
-        """
+    Returns:
+        item at index idx
+    """
 
-
-if idx < 0:
+    #check negative,out of ranhe index
+     if idx < 0:
         return None
     if idx >= len(my_list):
         return None
