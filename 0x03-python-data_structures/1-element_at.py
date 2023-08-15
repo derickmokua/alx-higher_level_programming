@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-
+# -----------------------------------------------------------
 # Python program that:
-# demonstrates how to retrieve an element from a list like in C
+# show how to retrieve an element from a list
+# -----------------------------------------------------------
 
 def element_at(my_list, idx):
-
-     """Retrieves an element from a list like in C
+    """Retrieves an element from a list
 
     Args:
         my_list: a list
@@ -15,8 +15,8 @@ def element_at(my_list, idx):
         item at index idx
     """
 
-    #check negative,out of ranhe index
-     if idx < 0:
+    # Check for negative and out of range index
+    if idx < 0:
         return None
     if idx >= len(my_list):
         return None
