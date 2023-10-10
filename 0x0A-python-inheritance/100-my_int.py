@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Myint class""""
 
 class MyInt(int):
-    """A MyInt class"""
     def __eq__(self, other):
-        """Overides and inverts == operator"""
-        return int(self) != int(other)
+        """Overrides the default implementation"""
+        if isinstance(other, MyInt):
+            return self.value != other.value
+        return False
 
     def __ne__(self, other):
-        """Overides and inverts != operator"""
-        return int(self) == int(other)
+        """Overrides the default implementation"""
+        if isinstance(other, MyInt):
+            return self.value == other.value
+    return True
