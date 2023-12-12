@@ -1,9 +1,16 @@
 #!/usr/bin/node
-if (process.argv.length <= 3) {
-  console.log(0);
+// Convert arguments into an array
+let args = process.argv.slice(2);
+
+// Convert all arguments to integers
+let numbers = args.map(Number);
+
+// Sort the array in descending order
+numbers.sort((a, b) => b - a);
+
+// Find the second largest number
+if (numbers.length < 2 || numbers[0] === numbers[1]) {
+   console.log(0);
 } else {
-  const args = process.argv.map(Number)
-    .slice(2, process.argv.length)
-    .sort((a, b) => a - b);
-  console.log(args[args.length - 2]);
+   console.log(numbers[1]);
 }
