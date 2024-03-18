@@ -5,19 +5,8 @@
 # -----------------------------------------------------------
 
 def element_at(my_list, idx):
-    """Retrieves an element from a list
-
-    Args:
-        my_list: a list
-        idx: the index of item to retrieve
-
-    Returns:
-        item at index idx
-    """
-
-    # Check for negative and out of range index
-    if idx < 0:
+    # Check if idx is negative or out of range
+    if idx < 0 or idx >= len(my_list):
         return None
-    if idx >= len(my_list):
-        return None
+    # Return the element at idx
     return my_list[idx]
