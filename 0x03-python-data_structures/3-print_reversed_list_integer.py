@@ -3,15 +3,12 @@
 # -----------------------------------------------------------
 # Python program that:
 # demonstrates how to print all integers of a list, in reverse order
-# -----------------------------------------------------------
-
+# ----------------------------------------------------------
 def print_reversed_list_integer(my_list=[]):
-    """prints integers of a list in reverse order
+    # Reverse the list
+    reversed_list = my_list[::-1]
 
-    Args:
-        my_list:a list
-    """
-     if my_list:
-        my_list.reverse()
-        for item in my_list:
-            print("{:d}".format(item))
+    # Iterate over the reversed list
+    for num in reversed_list:
+        # Use str.format() to print each integer
+        print("{:d}".format(num))
