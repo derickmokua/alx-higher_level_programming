@@ -1,4 +1,9 @@
 #!/usr/bin/node
+/**
+ * This script reads the contents of two specified files (fileA and fileB)
+ * and concatenates their contents into a third specified file (fileC).
+ * It assumes fileA and fileB exist and are valid files, and fileC is defined.
+ */
 const fs = require('fs');
 
 const fileA = process.argv[2];
