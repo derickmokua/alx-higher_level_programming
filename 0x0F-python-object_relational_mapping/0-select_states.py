@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Lists states from database"""
 
 import MySQLdb
