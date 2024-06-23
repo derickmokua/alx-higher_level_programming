@@ -1,22 +1,8 @@
 #!/usr/bin/node
+// Script that concatenates the contents of two files and writes the result to a third file.
+
+const args = process.argv.slice(2);
 const fs = require('fs');
-
-const fileA = process.argv[2];
-const fileB = process.argv[3];
-const fileC = process.argv[4];
-
-if (
-  fs.existsSync(fileA) &&
-fs.statSync(fileA).isFile &&
-fs.existsSync(fileB) &&
-fs.statSync(fileB).isFile &&
-fileC !== undefined
-) {
-  const fileAContent = fs.readFileSync(fileA);
-  const fileBContent = fs.readFileSync(fileB);
-  const stream = fs.createWriteStream(fileC);
-
-  stream.write(fileAContent);
-  stream.write(fileBContent);
-  stream.end();
-}
+const first = fs.readFileSync('./' + args[0]);
+const second = fs.readFileSync('./' + args[1]);
+fs.writeFileSync('./' + args[2], first + second);
